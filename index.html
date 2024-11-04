@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" async></script>
+
+    <title>Quiz Savanna</title>
+</head>
+<body>
+    <h1 class="title"><i class="fas fa-lion"></i> Savana Quiz</h1>
+    <h2 class="subtitle">Teste seus conhecimentos sobre a savana!</h2>
+
+    <audio id="background-music" loop>
+        <source src="Musica/Donkey Kong.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="positivo-som">
+        <source src="Efeitos Sonoros/Positivo.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="negativo-som">
+        <source src="Efeitos Sonoros/Negativo.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <img id="mascote" src="Imagens/Normal.png" alt="Mascote" class="mascote" />
+        <div class="question-container hide">
+         <span class="question">Pergunta aqui?</span>
+         <div class="answer-container">
+            <button class="answer button">Resposta 1</button>
+            <button class="answer button">Resposta 2</button>
+            <button class="answer button">Resposta 3</button>
+            <button class="answer button">Resposta 4</button>
+         </div>
+        </div>
+        <div class="controls-container">
+            <button class="Start-quiz button">Começar Quiz</button>
+            <button class="Next-quiz button hide">Proxima Pergunta</button>
+        </div>
+
+        <div class="score-container hide">
+            <span class="score">Pontuação: 0</span>
+        </div>
+
+        <div class="timer-container hide">
+            <span class="timer">Tempo restante: 35</span>
+        </div>
+
+        <div id="confetti"></div>
+    </div>        
+</body>
+</html>

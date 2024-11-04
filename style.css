@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Pangolin', sans-serif;
+    background-image: url('Imagens/Savana.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mascote {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; 
+    height: auto;
+}
+
+.score-container .hide {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ffcc00;
+}
+
+.timer-container .hide {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 3em; 
+    color: #ffcc00;
+    text-align: center; 
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-size: 1.5em; 
+    color: #ffcc00; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+    font-family: 'Pangolin', sans-serif; 
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.container {
+    background-color: #121214;
+    width: 90%;
+    max-width: 800px;
+
+    border: 2px solid #e1e1e6;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 0 2px 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+    z-index: 9999; 
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background-color: red; 
+    opacity: 0.8; 
+    animation: fall linear forwards; 
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg); 
+    }
+}
+
+.question-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.question {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.answer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.Next-quiz {
+margin-top: 32px;
+}
+
+.button {
+    background-color: #4863f7;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    height: 48px;
+    padding: 0 32px;
+    
+    transition: filter 0.2s;
+}
+
+.button:not(:disabled):hover {
+    filter: brightness(0.8);
+}
+
+.answer:disabled {
+    cursor: not-allowed;
+}
+
+.final-message {
+    font-size: 20px;
+    text-align: center;
+}
+
+.final-message span {
+    display: block;
+    margin-top: 8px;
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background-color: #2f922f;
+}
+
+.incorrect {
+    background-color: #ff3030;
+}
